@@ -1,3 +1,32 @@
+/*
+DARK PRIMARY COLOR#303F9F
+LIGHT PRIMARY COLOR#C5CAE9
+PRIMARY COLOR#3F51B5
+TEXT / ICONS#FFFFFF
+ACCENT COLOR#448AFF
+PRIMARY TEXT#212121
+SECONDARY TEXT#757575
+DIVIDER COLOR#BDBDBD
+
+*/
 td{
 	border: solid 1px;
+}
+
+.container{
+	background: #3F51B5;
+	background: -webkit-linear-gradient(to right, #3d72b4, #525252);
+	background: linear-gradient(to right, #3d72b4, #525252);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.content{
+	max-width: 960px;
+	max-height: 500px;
+	width: 100%;
+	height: 100%;
+	background-color: white;
 }
