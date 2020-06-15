@@ -9,8 +9,20 @@ SECONDARY TEXT#757575
 DIVIDER COLOR#BDBDBD
 
 */
-td{
+html{
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*td{
 	border: solid 1px;
+}
+*/
+.title{
+	text-transform: uppercase;
 }
 
 .container{
@@ -29,4 +41,27 @@ td{
 	width: 100%;
 	height: 100%;
 	background-color: white;
+}
+
+.paragraph{
+	line-height: 1.8em;
+	font-weight: 400;
+}
+
+.table{
+	width: 100%;
+	border-spacing: 0;
+}
+
+.table td , .table th {
+	padding: 1em;
+	text-align: center;
+}
+
+.table tr:nth-child(even){
+	background-color: #6b86b0;
+}
+
+.fa-star{
+	color: yellow;
 }
