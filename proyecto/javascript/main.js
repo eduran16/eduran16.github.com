@@ -45,6 +45,6 @@ contenido.classList.add("animate__animated");
 //Timer
 
 setTimeout(function(){
-	location.href = "/";
+	location.href = "./restaurante/restaurante.html";
 
 }, 600);
