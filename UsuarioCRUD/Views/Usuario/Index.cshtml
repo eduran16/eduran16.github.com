@@ -1,0 +1,40 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <table class="table table-bordered table-striped text-center" style="margin-top: 20px; background: white; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+        <tr>
+            <th class="text-center">Nº de registro</th>
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Apellido</th>
+            <th class="text-center">Genero</th>
+            <th class="text-center">Nombre de Usuario</th>
+            <th class="text-center">Correo Electronico</th>
+            <th class="text-center">Contraseña</th>
+            <th class="text-center">Comentario</th>
+            <th class="text-center">Acciones</th>
+        </tr>
+        @for (int i = 0; i < Model.Rows.Count; i++)
+        {
+            <tr>
+                <td>@Model.Rows[i][0]</td>
+                <td>@Model.Rows[i][1]</td>
+                <td>@Model.Rows[i][2]</td>
+                <td>@Model.Rows[i][3]</td>
+                <td>@Model.Rows[i][4]</td>
+                <td>@Model.Rows[i][5]</td>
+                <td>@Model.Rows[i][6]</td>
+                <td>@Model.Rows[i][7]</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" href="@Url.Action("Edit", "Usuario", new {@id=Model.Rows[i][0]})">Editar</a>
+                    <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Usuario", new {@id=Model.Rows[i][0]})">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a class="btn btn-success" href="@Url.Action("Create","Usuario")" style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">Añadir usuario</a>
+    <a class="btn btn-primary" href="~/CalculadoraAreas.aspx" style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">Calculadora de areas</a>
+    <a class="btn btn-primary" href="~/Calculator.aspx" style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">Calculadora</a>
+</div>

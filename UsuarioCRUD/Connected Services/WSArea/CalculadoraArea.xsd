@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://calculadora.service.ed.com/" targetNamespace="http://calculadora.service.ed.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AreaCirculo" type="tns:AreaCirculo" />
+  <xs:element name="AreaCirculoResponse" type="tns:AreaCirculoResponse" />
+  <xs:element name="AreaCuadrado" type="tns:AreaCuadrado" />
+  <xs:element name="AreaCuadradoResponse" type="tns:AreaCuadradoResponse" />
+  <xs:element name="AreaRectangulo" type="tns:AreaRectangulo" />
+  <xs:element name="AreaRectanguloResponse" type="tns:AreaRectanguloResponse" />
+  <xs:element name="AreaTriangulo" type="tns:AreaTriangulo" />
+  <xs:element name="AreaTrianguloResponse" type="tns:AreaTrianguloResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:complexType name="AreaCirculo">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreaCirculoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreaRectangulo">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:double" />
+      <xs:element name="arg1" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreaRectanguloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreaTriangulo">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:double" />
+      <xs:element name="arg1" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreaTrianguloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreaCuadrado">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreaCuadradoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

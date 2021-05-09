@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://calculadora.service.ed.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CalculadoraArea" targetNamespace="http://calculadora.service.ed.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSArea/CalculadoraArea?xsd=1" namespace="http://calculadora.service.ed.com/" />
+    </xsd:schema>
+  </types>
+  <message name="AreaCuadrado">
+    <part name="parameters" element="tns:AreaCuadrado" />
+  </message>
+  <message name="AreaCuadradoResponse">
+    <part name="parameters" element="tns:AreaCuadradoResponse" />
+  </message>
+  <message name="AreaRectangulo">
+    <part name="parameters" element="tns:AreaRectangulo" />
+  </message>
+  <message name="AreaRectanguloResponse">
+    <part name="parameters" element="tns:AreaRectanguloResponse" />
+  </message>
+  <message name="AreaTriangulo">
+    <part name="parameters" element="tns:AreaTriangulo" />
+  </message>
+  <message name="AreaTrianguloResponse">
+    <part name="parameters" element="tns:AreaTrianguloResponse" />
+  </message>
+  <message name="AreaCirculo">
+    <part name="parameters" element="tns:AreaCirculo" />
+  </message>
+  <message name="AreaCirculoResponse">
+    <part name="parameters" element="tns:AreaCirculoResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <portType name="CalculadoraArea">
+    <operation name="AreaCuadrado">
+      <input wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaCuadradoRequest" message="tns:AreaCuadrado" />
+      <output wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaCuadradoResponse" message="tns:AreaCuadradoResponse" />
+    </operation>
+    <operation name="AreaRectangulo">
+      <input wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaRectanguloRequest" message="tns:AreaRectangulo" />
+      <output wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaRectanguloResponse" message="tns:AreaRectanguloResponse" />
+    </operation>
+    <operation name="AreaTriangulo">
+      <input wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaTrianguloRequest" message="tns:AreaTriangulo" />
+      <output wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaTrianguloResponse" message="tns:AreaTrianguloResponse" />
+    </operation>
+    <operation name="AreaCirculo">
+      <input wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaCirculoRequest" message="tns:AreaCirculo" />
+      <output wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/AreaCirculoResponse" message="tns:AreaCirculoResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://calculadora.service.ed.com/CalculadoraArea/helloResponse" message="tns:helloResponse" />
+    </operation>
+  </portType>
+  <binding name="CalculadoraAreaPortBinding" type="tns:CalculadoraArea">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AreaCuadrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AreaRectangulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AreaTriangulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AreaCirculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CalculadoraArea">
+    <port name="CalculadoraAreaPort" binding="tns:CalculadoraAreaPortBinding">
+      <soap:address location="http://localhost:8080/WSArea/CalculadoraArea" />
+    </port>
+  </service>
+</definitions>

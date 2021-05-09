@@ -1,0 +1,32 @@
+﻿* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    /*background: rgb(2,0,36);
+    background: linear-gradient(245deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(54,114,126,1) 40%, rgba(9,9,121,1) 100%);
+    */
+}
+
+.container {
+    background: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    display: block;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#listArea{
+    margin: 10px;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}

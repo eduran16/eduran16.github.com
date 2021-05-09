@@ -1,0 +1,79 @@
+﻿@model UsuarioCRUD.Models.Usuario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+@using (Html.BeginForm("Create", "Usuario", FormMethod.Post, htmlAttributes: new { style= "background: white; border-radius: 4px; margin: 20px; padding: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal" style="margin: 20px;">
+        <h3>Crear nuevo usuario</h3>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+     
+        <div class="form-group">
+            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.nombre, htmlAttributes: new { @placeholder = "Introduzca su nombre", @class = "form-control", @required="required" })
+                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.apellido, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.apellido, htmlAttributes: new { @placeholder="Introduzca su apellido", @class = "form-control", @required = "required" })
+                @Html.ValidationMessageFor(model => model.apellido, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.sexo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(model => model.sexo, "M", htmlAttributes: new { @class = "form-check-input", @required = "required" }) Masculino
+                @Html.RadioButtonFor(model => model.sexo, "F", htmlAttributes: new { @class = "form-check-input", @required = "required" }) Femenino
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.userName, htmlAttributes: new { @placeholder="Introduzca su nombre de usuario", @class = "form-control", @required = "required" })
+                @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.email, htmlAttributes: new { @placeholder="ejemplo@gmail.com", @class = "form-control", @required = "required" })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.password, htmlAttributes: new { @placeholder="Introduzca su contraseña", @class = "form-control", @required = "required" })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.comentario, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.comentario, htmlAttributes: new { rows="3", @placeholder="Deje un comentario...", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.comentario, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Cancelar", "Index", "Usuario", htmlAttributes: new { @class = "btn btn-danger" })
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
