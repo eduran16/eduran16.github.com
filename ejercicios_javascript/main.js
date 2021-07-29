@@ -268,33 +268,51 @@ function factorial(numero) {
   pe. miFuncion(100,2) devolverá 4 base 10.  
 */
 
-/* let numero = 10001;
-let binario = numero.toString();
-let array = binario.split("").reverse();
-let resultado = 0;
-let contador = 0;
-//console.log(array);
-for(let i = 0; i < array.length; i++){
-  console.log(array);
-  resultado = parseInt(array[i]) * Math.pow(2, i);
-  contador = contador + resultado;
-  //console.log(resultado);
-}
-console.log(contador); */
-
-let numero = 725;
-
-decimal_a_binario(numero);
-function decimal_a_binario(numero) {
-  let residuo = 0;
+/* 
+  let numero = 10001;
+  let binario = numero.toString();
+  let array = binario.split("").reverse();
   let resultado = 0;
-  let array = [];
-  while (numero >= 2) {
-    numero = numero - resultado;
-    resultado = numero / 2;
-    residuo = numero % 2;
-    array.push(Math.floor(residuo));
-    console.log(Math.floor(numero));
+  let contador = 0;
+  //console.log(array);
+  for(let i = 0; i < array.length; i++){
+    console.log(array);
+    resultado = parseInt(array[i]) * Math.pow(2, i);
+    contador = contador + resultado;
+    //console.log(resultado);
   }
-  return console.log(array.reverse().join(""));
+  console.log(contador); 
+*/
+
+/* 
+  let numero = 725;
+
+  decimal_a_binario(numero);
+  function decimal_a_binario(numero) {
+    let residuo = 0;
+    let resultado = 0;
+    let array = [];
+    while (numero >= 2) {
+      numero = numero - resultado;
+      resultado = numero / 2;
+      residuo = numero % 2;
+      array.push(Math.floor(residuo));
+      console.log(Math.floor(numero));
+    }
+    return console.log(array.reverse().join(""));
+  } 
+*/
+
+/*
+  17)Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, 
+  pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020). 
+*/
+
+years_elapsed(1984, 4, 23);
+function years_elapsed(year, date, month) {
+  let fecha = new Date(year, date, month);
+  let fecha_actual = new Date();
+  console.log(fecha_actual.toDateString());
+  console.log(fecha.toDateString());
+  return console.log(`Han transcurrido ${fecha_actual.getFullYear() - fecha.getFullYear()}`);
 }
