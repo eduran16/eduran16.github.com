@@ -268,7 +268,7 @@ function factorial(numero) {
   pe. miFuncion(100,2) devolverá 4 base 10.  
 */
 
-let numero = 10001;
+/* let numero = 10001;
 let binario = numero.toString();
 let array = binario.split("").reverse();
 let resultado = 0;
@@ -280,4 +280,21 @@ for(let i = 0; i < array.length; i++){
   contador = contador + resultado;
   //console.log(resultado);
 }
-console.log(contador);
+console.log(contador); */
+
+let numero = 725;
+
+decimal_a_binario(numero);
+function decimal_a_binario(numero) {
+  let residuo = 0;
+  let resultado = 0;
+  let array = [];
+  while (numero >= 2) {
+    numero = numero - resultado;
+    resultado = numero / 2;
+    residuo = numero % 2;
+    array.push(Math.floor(residuo));
+    console.log(Math.floor(numero));
+  }
+  return console.log(array.reverse().join(""));
+}
