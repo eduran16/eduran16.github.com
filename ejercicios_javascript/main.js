@@ -308,11 +308,11 @@ function factorial(numero) {
   pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020). 
 */
 
-years_elapsed(1984, 4, 23);
+/* years_elapsed(1984, 4, 23);
 function years_elapsed(year, date, month) {
   let fecha = new Date(year, date, month);
   let fecha_actual = new Date();
   console.log(fecha_actual.toDateString());
   console.log(fecha.toDateString());
-  return console.log(`Han transcurrido ${fecha_actual.getFullYear() - fecha.getFullYear()}`);
-}
+  return console.log(`Han transcurrido ${fecha_actual.getFullYear() - fecha.getFullYear()} desde el ${fecha.getFullYear()}`);
+} */
