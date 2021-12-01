@@ -225,7 +225,8 @@ function factorial(numero) {
 */
 
 /*
-  13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar. 
+  13) Programa una función que determine si un número es par o impar, 
+  pe. miFuncion(29) devolverá Impar. 
 */
 
 /* 
@@ -304,15 +305,112 @@ function factorial(numero) {
 */
 
 /*
-  17)Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, 
-  pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020). 
+  16) Programa una función que devuelva el monto final después de aplicar 
+  un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800. 
 */
 
-/* years_elapsed(1984, 4, 23);
-function years_elapsed(year, date, month) {
-  let fecha = new Date(year, date, month);
-  let fecha_actual = new Date();
-  console.log(fecha_actual.toDateString());
-  console.log(fecha.toDateString());
-  return console.log(`Han transcurrido ${fecha_actual.getFullYear() - fecha.getFullYear()} desde el ${fecha.getFullYear()}`);
-} */
+/* 
+function calculo_descuento(monto, descuento) {
+  let resultado = 0;
+  descuento = monto * (descuento / 100);
+  resultado = monto - descuento;
+  return resultado;
+}
+console.log(calculo_descuento(1000, 20)); 
+*/
+
+/*
+  17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta 
+  el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).  
+*/
+/* 
+  function tiempo_transcurrido(year, dia, mes) {
+    const fecha = new Date(year, dia, mes);
+    const fecha_actual = new Date();
+    let msecPerYear = 1000 * 60 * 60 * 24 * 365;
+    console.log(Math.floor((fecha_actual - fecha) / msecPerYear));
+  }
+
+  tiempo_transcurrido(1984, 4, 23); 
+*/
+
+/*
+  18) Programa una función que dada una cadena de texto cuente el número de vocales 
+  y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.  
+*/
+
+/* 
+  function contador_letras(palabra) {
+  //borrar espacio en la palabra
+  palabra = palabra.split(" ").join("");
+  //separar la palabra en letras y obtener un array
+  palabra = palabra.split("");
+  const letra = ["a","e","i","o","u","z"]
+  let vocal = 0;
+  let consonante = 0;
+  
+  
+  //recorrer la palabra, guardar el elemento actual en una variable y preguntar si ese elemento
+  //se encuentra en el array de letras 
+  
+  for (let i = 1; i <= palabra.length; i++){
+    let element = palabra[i];
+    if(letra.includes(element)){
+      vocal++;
+    } else {
+      consonante++;
+    }
+  }
+  console.log(`${vocal} vocales, ${consonante} consonante`);
+}
+  contador_letras("la palabra"); 
+*/
+
+/*
+  21) Programa una función que dado un array numérico devuelve otro array con los números elevados 
+  al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].  
+*/
+
+/* 
+  const numeros = [2,8,7];
+
+  function elevar_cuadro(numeros) {
+    const array = [];
+    let resultado = 0;
+    for (let i = 0; i < numeros.length; i++) {
+      const element = numeros[i];
+      resultado = Math.pow(element, 2);
+      array.push(resultado);
+    }
+    console.log(array);
+  }
+
+  elevar_cuadro(numeros); 
+*/
+
+/*
+  22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, 
+  pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+*/
+
+const array = [1,4,5,99,-60];
+
+function mayorMenor(numeros) {
+  let alto = 0;
+  let bajo = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    let element = numeros[i];
+
+    for (let x = 0; x < numeros.length; x++) {
+      //console.log(numeros[i], numeros [x]);
+      let element_2 = numeros[x];
+      if (element >= element_2) {
+        alto = element;
+      }
+      
+    }
+  }
+  console.log(alto);
+}
+
+mayorMenor(array);
